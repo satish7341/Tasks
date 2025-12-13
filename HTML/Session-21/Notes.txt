@@ -1,0 +1,106 @@
+                                # <!--datalist Notes-->
+1. Definition
+<datalist> is an HTML tag used to provide auto-suggestions for an <input> field.
+
+2. How it Works
+<input> uses the attribute list="id"
+<datalist> contains <option> values
+When user types in the input box, the browser shows suggestions
+
+3. Syntax
+<input type="text" list="items">
+<datalist id="items">
+  <option value="Option 1">
+  <option value="Option 2">
+</datalist>
+
+4. Key Points
+Gives suggestions but does NOT restrict the user.
+User can type anything even if it is not in the list.
+Works only with <input> elements.
+<option> should have value="" for better compatibility.
+
+5. Use Cases
+Search bars
+Forms with common inputs
+Product or city suggestions
+Auto-complete data
+
+
+                          #    <details> Tag in HTML
+1. Definition
+<details> is an HTML tag used to create a collapsible/expandable content section.
+The user can click to open or close the hidden content.
+
+2. How it Works
+<details> wraps the content.
+<summary> gives the visible heading/title.
+When the user clicks the summary, the hidden content appears.
+
+3. Syntax
+<details>
+  <summary>More Information</summary>
+  <p>This content is hidden until clicked.</p>
+</details>
+
+4. Key Points
+Provides a built-in toggle (no JavaScript needed).
+Useful for FAQs, extra info, privacy policies, etc.
+Can be opened by default using the open attribute:
+<details open>
+Improves accessibility because browsers recognize it as expandable content.
+
+5. Use Cases
+FAQ sections
+Showing/hiding extra text
+Terms & conditions
+Collapsible menus
+
+
+                                #   <iframe> Tag in HTML
+1. Definition
+<iframe> (Inline Frame) is used to embed another webpage or external content inside the current webpage.
+
+2. Purpose
+It allows you to display:
+Another website
+Videos (YouTube)
+Maps (Google Maps)
+PDF documents
+Advertisements
+
+3. Syntax
+<iframe src="https://example.com" width="500" height="300"></iframe>
+
+4. Important Attributes
+src → URL of the webpage/content to embed
+width → width of the frame
+height → height of the frame
+title → improves accessibility
+frameborder="0" → removes border (optional)
+allowfullscreen → allows full-screen mode (useful for videos)
+
+5. Key Points
+Embeds external content inline in your page.
+Can be restricted for security using sandbox:
+<iframe src="page.html" sandbox></iframe>
+Used commonly for embedding YouTube videos and Google Maps.
+
+6. Example
+<iframe 
+  src="https://www.wikipedia.org" 
+  width="600" 
+  height="350">
+</iframe>
+
+
+
+
+
+
+
+
+
+
+
+

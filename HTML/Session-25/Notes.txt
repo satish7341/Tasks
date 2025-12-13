@@ -1,0 +1,47 @@
+1️⃣ Element Selector
+Selects elements by tag name
+p { color: red; }
+
+2️⃣ ID Selector
+Selects one unique element
+#box { background: blue; }
+
+3️⃣ Class Selector
+Selects multiple elements
+.text { font-size: 18px; }
+
+4️⃣ Universal Selector
+Selects all elements
+* { margin: 0; }
+
+5️⃣ Group Selector
+Selects multiple elements together
+h1, h2, p { color: green; }
+
+6️⃣ Descendant Selector
+Selects elements inside another element
+div p { color: red; }
+
+7️⃣ Child Selector
+Selects direct children only
+div > p { color: blue; }
+
+8️⃣ Adjacent Sibling Selector
+Selects next element
+h1 + p { color: orange; }
+
+9️⃣ General Sibling Selector
+Selects all siblings
+h1 ~ p { color: pink; }
+
+🔟 Attribute Selector
+Selects elements by attribute
+input[type="text"] { border: 1px solid black; }
+
+1️⃣1️⃣ Pseudo-class Selector
+Selects special states
+a:hover { color: red; }
+
+1️⃣2️⃣ Pseudo-element Selector
+Selects part of an element
+p::first-letter { font-size: 30px; }

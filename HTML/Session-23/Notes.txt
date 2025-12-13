@@ -1,0 +1,72 @@
+         <audio> Tag
+✅ Purpose
+Used to embed audio files into a webpage.
+
+✅ Syntax
+<audio controls>
+    <source src="audio.mp3" type="audio/mp3">
+</audio>
+
+| Attribute    | Meaning                             |
+| ------------ | ----------------------------------- |
+| **controls** | Shows play, pause, volume buttons   |
+| **autoplay** | Audio starts automatically          |
+| **loop**     | Audio repeats continuously          |
+| **muted**    | Audio starts with sound OFF         |
+| **src**      | Audio file path (inside `<source>`) |
+
+
+💡 Note
+Always use <source> inside <audio> for better browser support.
+
+📙 NOTES: <video> Tag
+🎥 Purpose
+Used to embed video files into a webpage.
+
+Syntax
+<video controls width="300" height="200">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+            Important Attributes
+| Attribute              | Meaning                            |
+| ---------------------- | ---------------------------------- |
+| **controls**           | Show play/pause buttons            |
+| **autoplay**           | Video starts playing automatically |
+| **muted**              | Video starts with no sound         |
+| **loop**               | Video plays repeatedly             |
+| **poster="image.png"** | Display image before video starts  |
+| **width/height**       | Size of the video frame            |
+
+📗 NOTES: <source> Tag
+📌 Purpose
+Specifies the file location and file type for <audio> and <video>.
+syntax
+<source src="file.mp4" type="video/mp4">
+✔ Helps the browser pick the correct format
+✔ Used inside <audio> and <video>
+
+       <track> Tag
+🎯 Purpose
+Adds subtitles, captions, or translations to a video.
+
+Syntax
+<track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+
+Important Attributes
+| Attribute   | Meaning                             |
+| ----------- | ----------------------------------- |
+| **kind**    | subtitles / captions / descriptions |
+| **srclang** | Language code (en, hi, te, etc.)    |
+| **label**   | Name shown to user                  |
+| **src**     | Subtitle file path (.vtt file)      |
+
+📌 Summary (Very Important for Exams)
+
+<audio> → Embeds audio
+<video> → Embeds videos
+<source> → Gives audio/video file format
+<track> → Adds subtitles/captions
+controls → Show playback controls
+autoplay + muted → Required by browsers to auto-play
+poster → Show image before video plays
