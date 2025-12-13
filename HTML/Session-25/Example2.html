@@ -1,19 +1,172 @@
+1️⃣ Element Selector
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo on the Selectors</title>
-    <style>
-        *{
-            color: red;
-        }
-    </style>
+<head>
+<style>
+p { color: red; }
+</style>
 </head>
 <body>
-    <h3>Demo ont the Selectors</h3>
-    <P>Selects all elements on the page.</P>
-     <P>Selects all elements on the page.</P>
-      <P>Selects all elements on the page.</P>
+<p>This is a paragraph</p>
+</body>
+</html>
+
+2️⃣ ID Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+#head { color: blue; }
+</style>
+</head>
+<body>
+<h1 id="head">Welcome</h1>
+</body>
+</html>
+
+3️⃣ Class Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.text { color: green; }
+</style>
+</head>
+<body>
+<p class="text">Paragraph 1</p>
+<p class="text">Paragraph 2</p>
+</body>
+</html>
+
+4️⃣ Universal Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+* { font-family: Arial; }
+</style>
+</head>
+<body>
+<h1>Hello</h1>
+<p>World</p>
+</body>
+</html>
+
+5️⃣ Group Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1, p { color: purple; }
+</style>
+</head>
+<body>
+<h1>Heading</h1>
+<p>Paragraph</p>
+</body>
+</html>
+
+6️⃣ Descendant Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+div p { color: red; }
+</style>
+</head>
+<body>
+<div>
+  <p>Inside div</p>
+</div>
+<p>Outside div</p>
+</body>
+</html>
+
+7️⃣ Child Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+div > p { color: blue; }
+</style>
+</head>
+<body>
+<div>
+  <p>Direct child</p>
+  <span><p>Not direct child</p></span>
+</div>
+</body>
+</html>
+
+8️⃣ Adjacent Sibling Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 + p { color: orange; }
+</style>
+</head>
+<body>
+<h1>Title</h1>
+<p>This paragraph is selected</p>
+<p>This is not</p>
+</body>
+</html>
+
+9️⃣ General Sibling Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 ~ p { color: brown; }
+</style>
+</head>
+<body>
+<h1>Heading</h1>
+<p>Para 1</p>
+<p>Para 2</p>
+</body>
+</html>
+
+🔟 Attribute Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+input[type="text"] { background: yellow; }
+</style>
+</head>
+<body>
+<input type="text">
+<input type="password">
+</body>
+</html>
+
+1️⃣1️⃣ Pseudo-class Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+a:hover { color: red; }
+</style>
+</head>
+<body>
+<a href="#">Hover Me</a>
+</body>
+</html>
+
+1️⃣2️⃣ Pseudo-element Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+p::first-letter { font-size: 30px; }
+</style>
+</head>
+<body>
+<p>Hello World</p>
 </body>
 </html>
