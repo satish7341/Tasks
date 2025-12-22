@@ -1,36 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Example.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movierulz</title>
+<title>Movierulz</title>
+
+<style>
+
+/* CSS for Movierulz Website */
+:root{}
+
+body{
+    background:grey;
+    margin:0;
+}
+
+/* Header */
+header{
+    background:rgb(170, 142, 142);
+    color:rgb(55, 7, 7);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header img{
+    width:100px;
+    height:10px;
+}
+
+/*Slogan*/
+.slogan{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Navigation Bar */
+nav{
+    display:flex;
+    justify-content:right;
+    background:#c4baba;
+    padding:5px;
+    gap:10px;
+}
+
+nav a{
+    color:black;
+    text-decoration:none;
+    padding:8px 16px;
+    font-size:18px;
+}
+
+nav a:hover{
+    background:rgb(104, 99, 99);
+    color:white;
+    border-radius:4px;
+    cursor:pointer;
+
+}
+
+/* Main Content */
+main{
+    padding:20px;
+}
+
+/* Grid Box - 4 Columns */
+.grid-box{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:40px;
+    justify-content:center;
+}
+
+/* Movie Card */
+section{
+    text-align:center;
+}
+
+section img{
+    width:70%;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+section div{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:rgb(55,7,7);
+}
+section{
+    text-align:center;
+    transition:transform .2s ease;
+    cursor:pointer;
+}
+section:hover{
+    transform:scale(1.05);
+}
+
+.grid-box a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Footer */
+footer{
+    background:rgb(170, 142, 142);
+    color:rgb(55, 7, 7);
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+</style>
 </head>
+
 <body>
-    <header>
-    <h1>Movierulz</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        </nav>
-    </header>
-    <br>
-    <article>
-        <div>Movierulz Website 2026</div>
-    </article>
-    <!--grid section    -->
-    <main Class="grid-box" style="display: flex; flex-wrap: wrap;  gap: 30px; justify-content: center;">
-        <!--grid item-->
-        <section>
+
+<header>
+    <div class="header">
+        <img src="logo.png">
+        <div class="slogan" style="font-size:30px; font-weight:bold;">Movierulz</div>
+    </div>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Movies</a>
+    <a href="#">Latest</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+<div class="grid-box">
+
+     <section>
              <div>
             <img src="Img1.png" alt="Premante" >
             <div>
                 <a href="https://www.5movierulz.hockey/premante-2025-telugu/movie-watch-online-free-6081.html">
                     Premante
                 </a>
+
                 <div><strong>2025</strong></div>
             </div>
         </div>
@@ -121,20 +236,16 @@
                     <div><strong>2025</strong></div>
                 </div>
             </div>
-    </main>
-    <!--Search box-->
-    <section class="search-box">
-        <div>
-<h2>Search</h2>
-<div>
-    <input type="text" placeholder="Search for movies...">
-    <button type="submit">🔍</button>
-    
-</div>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2026 Movierulz. All rights reserved.</p>
-    </footer>
+        </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        © 2025 Movierulz — All Rights Reserved
+    </div>
+
+
+</footer>
+
 </body>
 </html>
