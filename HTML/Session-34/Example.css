@@ -1,0 +1,119 @@
+:root{
+    --x:#222;
+}
+
+body{
+    background:#111;
+    margin: 0;
+}
+/* header styles */
+.header{
+    background: var(--x);
+    padding: 25px 50px;
+    margin-bottom: 5%;
+}
+.header img{
+    width: 150px;
+    height: 80px;
+
+}
+/* slogan styles */
+.slogan{
+    text-align: center;
+    padding: 15px; ;
+    margin-bottom:5%;
+}
+.slogan div:first-child{
+    color:#FFF;
+    font-size: 3rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px;
+}
+.slogan div:first-child::first-letter{
+    background: yellow;
+    color: #000;
+    padding: 2px 9px;
+}
+.slogan div:last-child{
+    color: #EEE;
+    font-size: 18px;
+   
+}
+.slogan u{
+    text-decoration: 2px dotted yellow underline;
+}
+.search-box{
+    width:75%;
+    margin: auto;
+    background:var(--x);
+    margin-bottom: 5%;
+    padding: 25px;
+    text-align: center;
+    color: #FFF;
+}
+.search{
+    margin-top: 20px;
+    background-color: yellow;
+    display: inline-block;
+    border-radius: 15px;
+    padding-right: 10px;
+}
+.search input{
+    background: var(--x);
+    border: none;
+    color:#FFF;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid silver;
+}
+/* footer styles*/
+.footer{
+    background: var(--x);
+    color: #EEE;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* grid styles*/
+.grid-box{
+    width:90% ;
+    margin:auto;
+    display:grid;  /*n rows X 1 col */
+    /* grid-template-columns: 400p 400px 400p;  */
+    grid-template-columns: repeat(5,1fr);
+    /* grid-template-columns: */
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    /*grid-template-rows:repeat(4,300px); */
+    /* column-gap: 10px;
+    row-gap: 10px; */ /* instead of using these we can use the following one */
+    grid-gap: 10px 10px;
+    margin-bottom: 5%;
+}
+.grid-item img{
+ width:90%;
+ height: 200px;
+}
+.grid-item a{
+    color:#FFF;
+    text-decoration: none;
+    font-size: 125%;
+}
+.grid-item a:hover{
+    color:green;
+    text-decoration: underline;
+}
+.grid-item strong{
+    color:cyan;
+}
+.grid-item{
+    transition: 600ms;
+}
+.grid-item:hover{
+    /* transform:scale(1.25); */    
+   /* filter:blur(3px); */
+  /* filter: contrast(150%);*/
+/* filter: brightness(150%); */
+     filter: grayscale(); 
+}

@@ -1,0 +1,44 @@
+/* defining styles for flex app*/
+.header{
+    background: lightgray;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+       }
+
+/* flex styles */
+.flex-box{
+    display: flex;
+       flex-direction: row;
+       /* row reverse, column ,column-reverse */
+       flex-wrap: wrap; /*nowrap*/
+      /* gap:100px; */
+       /* alignment change
+          justify-content:start/center/end; */
+          /* for space */
+    justify-content: space-evenly;
+    /*assume rem space=100pc
+    space-between => rem space/n-1 =>100/3=33.33
+    space-around => rem space/n-1 =>100/4=25
+    space-evenly => rem space/n+1 => 100/5=20 */
+    padding: 15px 5px;
+    }
+.flex-item{
+    text-align: center;
+    width:20%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    transition:0.5s;
+    }
+.flex-item:hover{
+    box-shadow: 0 0 20px red;
+    transform: scale(1.05);
+       }
+img{
+    width:100%;
+    height: 280px;
+    border-radius: 15px;
+     }
+.price{
+    font-size: 24px;
+    font-weight: bold;
+     }

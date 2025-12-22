@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex App – Deals of the Month</title>
+
+    <style>
+        /* Header */
+        .header{
+            background: lightgray;
+            padding: 5px 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Flexbox Container */
+        .flex-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding: 15px 5px;
+        }
+
+        /* Flex Items */
+        .flex-item{
+            text-align: center;
+            flex-basis: 22%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px black;
+            transition: 0.5s;
+            padding: 10px;
+        }
+
+        .flex-item:hover{
+            box-shadow: 0 0 20px red;
+            transform: scale(1.05);
+        }
+
+        /* Images */
+        img{
+            width: 100%;
+            height: 280px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        /* Price */
+        .price{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 900px){
+            .flex-item{
+                flex-basis: 45%;
+            }
+        }
+
+        @media(max-width: 500px){
+            .flex-item{
+                flex-basis: 90%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Deals of the Month</h1>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="flex-box">
+
+        <!-- Product 1 -->
+        <div class="flex-item">
+            <img src="mobile1.jpg" alt="OnePlus Mobile">
+            <h2>OnePlus 15 | Sand Storm</h2>
+
+            <div class="offer">
+                <span class="price">&#8377;79,998</span>
+                M.R.P <del>&#8377;83,999</del> (5% off)
+            </div>
+
+            <div>
+                FREE delivery <strong>Sat, 20 Dec</strong>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="flex-item">
+            <img src="mobile2.jpg" alt="OnePlus Mobile">
+            <h2>OnePlus 15 | Infinite Black</h2>
+
+            <div class="offer">
+                <span class="price">&#8377;79,998</span>
+                M.R.P <del>&#8377;83,999</del> (5% off)
+            </div>
+
+            <div>
+                FREE delivery <strong>Fri, 19 Dec</strong>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="flex-item">
+            <img src="mobile3.jpg" alt="OnePlus Mobile">
+            <h2>OnePlus 15 | Sand Storm</h2>
+
+            <div class="offer">
+                <span class="price">&#8377;72,999</span>
+                M.R.P <del>&#8377;76,999</del> (5% off)
+            </div>
+
+            <div>
+                FREE delivery <strong>Fri, 19 Dec</strong>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="flex-item">
+            <img src="mobile3.jpg" alt="OnePlus Mobile">
+            <h2>OnePlus 15 | Infinite Black</h2>
+
+            <div class="offer">
+                <span class="price">&#8377;72,999</span>
+                M.R.P <del>&#8377;76,999</del> (5% off)
+            </div>
+
+            <div>
+                FREE delivery <strong>Fri, 19 Dec</strong>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
