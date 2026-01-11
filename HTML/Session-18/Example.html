@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 input elments</title>
+</head>
+<body>
+    <h3>HTML5 Input Elements</h3>
+    <form>
+        <!-- Email Input -->
+        <label for="em">Enter email id</label>
+        <input type="email" id="em" placeholder="Enter the Email">
+        <br><br>
+        <!-- URL Input -->
+        <label for="u">Enter the URL</label>
+        <input type="url" id="u">
+        <br><br>
+        <!-- date Input -->
+        <label for="d">Enter the DOB</label>
+        <input type="date" id="d" min="yyyy-mm-dd"
+        max="yyyy-mm-dd">
+        <br><br>
+        <!--time -->
+        <label for="t">Enter the Time</label>
+        <input type="time" id="t" min="hr-mm-ss"
+        max="hr-mm-ss">
+        </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo on Radio Buttons</title>
+</head>
+<body>
+
+    <h2>Demo on Radio Buttons</h2><br>
+
+    <label>Marital Status</label><br>
+
+    <input type="radio" name="ms" id="s">
+    <label for="s">Single</label>
+
+    <input type="radio" name="ms" id="m">
+    <label for="m">Married</label>
+
+    <input type="radio" name="ms" id="d1">
+    <label for="d1">Divorced</label>
+
+    <input type="radio" name="ms" id="w1">
+    <label for="w1">Widowed</label>
+
+    <br><br>
+
+    <h2>Demo on HTML5 Input Elements</h2>
+
+    <form>
+        <label for="em">Enter Email ID</label>
+        <input type="email" id="em"><br>
+
+        <label for="u">Enter URL</label>
+        <input type="url" id="u"><br>
+
+        <label for="d">Select Date</label>
+        <input type="date" id="d" min="2021-01-01" max="2025-12-31"><br>
+
+        <label for="dt">Select Date & Time</label>
+        <input type="datetime-local" id="dt"><br>
+
+        <label for="w">Select Week</label>
+        <input type="week" id="w"><br>
+
+        <label for="M">Select Month</label>
+        <input type="month" id="M"><br>
+
+        <!-- Fix: JavaScript corrected -->
+        <input type="color" id="c" onchange="document.body.style.background = this.value;"><br>
+
+        <!-- Fix: second color changes a specific div or body? using document.body -->
+        <input type="color" id="e" onchange="document.body.style.color = this.value;"><br>
+
+        <button type="reset">Reset All</button>
+        <button type="submit">Submit</button>
+
+        <br><br>
+
+        <h2>Demo on File Uploading</h2>
+
+        <input type="file"><br>
+        <input type="file" accept=".pdf, .docx"><br>
+        <input type="file" multiple>
+
+    </form>
+
+</body>
+</html>

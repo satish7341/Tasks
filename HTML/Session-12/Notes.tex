@@ -1,0 +1,143 @@
+
+## **1. What are Internal Hyperlinks?**
+
+Internal hyperlinks are links that **jump to a specific section within the same webpage**.
+
+Example:
+Click "Hyderabad" → Page scrolls to the Hyderabad section.
+
+---
+
+## **2. How Internal Links Work**
+
+Internal links use two things:
+
+### **(1) `id` Attribute**
+
+Used to **mark a location** on the page.
+
+Example:
+
+```html
+<h2 id="Hyd">Hyderabad</h2>
+```
+
+### **(2) `<a href="#idName">`**
+
+Used to **jump to that location**.
+
+Example:
+
+```html
+<a href="#Hyd">Hyderabad</a>
+```
+
+➡️ `#Hyd` tells the browser to scroll to the element with `id="Hyd"`.
+
+---
+
+## **3. Why Use Internal Hyperlinks?**
+
+They are useful in:
+
+✔ Long pages
+✔ Table of contents
+✔ Navigation menus
+✔ Jump-to-top buttons
+
+---
+
+## **4. Explanation of Your Code**
+
+### **Title & Favicon**
+
+```html
+<title>facebook - login page</title>
+<link rel="icon" href="image.png"/>
+```
+
+* The title appears on the browser tab
+* The favicon shows a small icon (image.png file)
+
+---
+
+## **Top Heading**
+
+```html
+<h2 id="top">demo on internal hyperlinks</h2>
+```
+
+* `id="top"` lets us jump back to the top from any section.
+
+---
+
+## **Navigation Links**
+
+```html
+<p align="center">
+    <a href="#Hyd">Hyderabad</a>
+    <a href="#Niz">Nizamabad</a>
+    <a href="#Ktg">Kotagiri</a>
+</p>
+```
+
+* These links allow the user to jump to specific city sections.
+* `align="center"` centers the links.
+
+---
+
+## **Destination Sections**
+
+### **Hyderabad Section**
+
+```html
+<h2 id="Hyd"><u>Hyderabad</u></h2>
+Bn Reddy <br>
+<a href="#top">top</a>
+```
+
+* `id="Hyd"` is the target for the Hyderabad link.
+* `<a href="#top">top</a>` takes the user back to the top.
+
+---
+
+### **Nizamabad Section**
+
+```html
+<h2 id="Niz"><u>Nizamabad</u></h2>
+Nagaram <br>
+<a href="#top">top</a>
+```
+
+---
+
+### **Kotagiri Section**
+
+```html
+<h2 id="Ktg"><u>Kotagiri</u></h2>
+temple <br>
+<a href="#top">top</a>
+```
+
+---
+
+## ⭐ **Important Points**
+
+* IDs must be **unique**.
+* **Case-sensitive** → `Ktg` ≠ `ktg`.
+* `#` symbol is required in internal links.
+* Internal links work **only within the same page**.
+* Use `id` to mark the destination.
+* Use `<a href="#id">` to jump to the destination.
+
+---
+
+## 🎯 **Extra Tip**
+
+Always keep your section IDs simple and meaningful:
+
+* `#top`
+* `#about`
+* `#contact`
+* `#services`
+

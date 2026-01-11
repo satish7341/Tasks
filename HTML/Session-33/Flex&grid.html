@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Demo</title>
+
+<style>
+.flex-box{
+    display: flex;
+    gap: 100px;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    
+    padding: 20px;
+}
+    
+
+.card{
+    border: 2px inset black;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgb(24, 16, 17);
+    transition: 0.5s;
+
+}
+
+.card:hover{
+    box-shadow: 0 0 20px rgb(31, 20, 31);
+    transform: scale(1.1);
+    cursor: pointer;
+    border-radius: 
+    15px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;  
+    box-shadow: 0char 0 10px gray;  
+    
+}
+
+.card del{
+    color: red;
+    font-size: 18px;
+}
+
+.card mark{
+    background-color: yellow;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Demo on the Flex and Grid</h1>
+
+<div class="flex-box">
+
+    <div class="card">
+        <img src="img1.png" alt="Image 1">
+        <h2>iPhone 17 Pro Max 1 TB</h2>
+        <p>Price: $1999.99</p>
+        <del>M.R.P : $2199.99</del>
+        <mark>(30% off)</mark>
+    </div>
+
+    <div class="card">
+        <img src="img22.png" alt="Image 2">
+        <h2>iPhone 18 Pro Max 512 GB</h2>
+        <p>Price: $1799.99</p>
+        <del>M.R.P : $1999.99</del>
+        <mark>(30% off)</mark>
+    </div>
+
+    <div class="card">
+        <img src="image.png" alt="Image 2">
+        <h2>iPhone 19 Pro Max 512 GB</h2>
+        <p>Price: $1899.99</p>
+        <del>M.R.P : $19999.99</del>
+        <mark>(30% off)</mark>
+    </div>
+<div class="card">
+        <img src="img22.png" alt="Image 2">
+        <h2>iPhone 18 Pro Max 512 GB</h2>
+        <p>Price: $1799.99</p>
+        <del>M.R.P : $1999.99</del>
+        <mark>(30% off)</mark>
+    </div>
+    
+
+</div>
+
+</body>
+</html>

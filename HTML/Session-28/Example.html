@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo Elements Full Demo</title>
+
+<style>
+
+/* ---------------- BEFORE & AFTER ---------------- */
+h1::before{
+    content: "🔥 ";
+    color: orange;
+}
+h1::after{
+    content: " ✔";
+    color: green;
+}
+
+/* ---------------- FIRST LETTER ---------------- */
+p::first-letter{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+}
+
+/* ---------------- FIRST LINE ---------------- */
+p::first-line{
+    color: blue;
+}
+
+/* ---------------- SELECTION ---------------- */
+::selection{
+    background: yellow;
+    color: black;
+}
+
+/* ---------------- PLACEHOLDER ---------------- */
+input::placeholder{
+    color: purple;
+    font-style: italic;
+}
+
+/* ---------------- MARKER ---------------- */
+ol li::marker{
+    color: brown;
+    font-size: 22px;
+}
+
+/* ---------------- FIRST & LAST CHILD ---------------- */
+ol li:first-child{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+ol li:last-child{
+    color: rgb(0, 255, 94);
+}
+</style>
+
+</head>
+<body>
+
+<h1>Pseudo Elements Demo</h1>
+
+<p>
+CSS pseudo-elements allow you to style a specific part of HTML content
+like first letter, first line or even insert virtual content without
+writing extra HTML tags.
+</p>
+
+<input type="text" placeholder="Enter your name">
+<input type="password" placeholder="Enter password">
+
+<h3>Programming Languages</h3>
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>Node JS</li>
+</ol>
+
+</body>
+</html>

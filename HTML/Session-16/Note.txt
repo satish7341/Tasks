@@ -1,0 +1,75 @@
+1. Basic Input Box
+<input type="text">
+✔ Creates a normal single-line text box.
+✔ Accepts letters, numbers, and symbols.
+
+🟩 2. Size Attribute
+<input type="text" size="50">
+✔ Sets the visible width of the textbox (older method).
+✔ Does NOT control how many characters can be typed.
+
+🟩 3. Minlength & Maxlength
+<input type="text" minlength="34" maxlength="35">
+✔ Minimum and maximum characters allowed.
+✔ Browser prevents submitting form if rules break.
+
+🟩 4. Placeholder
+<input type="text" placeholder="Enter the first name">
+✔ Shows light grey hint inside the input field.
+✔ Disappears when user types.
+
+🟩 5. Label
+<label for="lname">Enter the last name</label>
+<input type="text" id="lname">
+✔ Connects text with its input.
+✔ Clicking label focuses the input.
+
+🟩 6. Required Attribute
+<input type="text" required>
+✔ Field must be filled before submitting the form.
+✔ Browser shows error message if empty.
+
+🟩 7. Value Attribute
+<input type="text" value="battur">
+✔ Pre-fills the input with default text.
+
+🟩 8. Readonly Attribute
+<input type="text" value="battur" readonly>
+✔ User cannot change value.
+✔ Can still copy the text.
+
+🟩 9. Disabled Attribute
+<input type="text" value="battur" disabled>
+✔ Completely inactive.
+✔ Cannot edit, focus, or submit with form.
+
+🟩 10. Name & ID Attribute
+<input type="text" id="x1" name="x2">
+✔ id → unique identifier for CSS/JS
+✔ name → important for form submission
+
+🟩 11. Password Field
+<input type="password">
+✔ Hides the typed characters (••••).
+✔ Used for passwords, CVV, PIN, etc.
+
+🟩 12. Password With Limit
+<input type="password" minlength="3" maxlength="3">
+✔ Forces exactly 3 digits (used for CVV).
+
+🟩 13. Number Field
+<input type="number">
+✔ Accepts only numbers.
+✔ Shows up/down arrows in some browsers.
+
+🟩 14. Number Field With Range
+<input type="number" min="0" max="200" step="10">
+✔ min → minimum allowed
+✔ max → maximum allowed
+✔ step="10" → increases by 10 each click
+
+🟩 15. Reset Button
+<input type="reset" value="clear search">
+✔ Clears all inputs inside the form.
+✔ Returns fields to their original values.
+

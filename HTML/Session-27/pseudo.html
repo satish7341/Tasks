@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo Selector Demo</title>
+
+<style>
+
+h3::before{
+    content:"🔥 ";
+}
+
+h3::after{
+    content:" ✔️";
+}
+
+p::before{
+    content:"👉 ";
+    color:green;
+}
+
+p::after{
+    content:" 🎯";
+}
+
+input:focus{
+    border:1px solid  blue;
+    outline:none;
+}
+
+</style>
+</head>
+<body>
+
+<h3>Demo on the Pseudo Selectors</h3>
+<h4>Used to style elements in a particular state or condition.</h4>
+
+<input type="text" id="c1">
+<input type="text" id="c2">
+
+<p>This course is made for people who want to learn DSA from A to Z for free in a well-organised and structured manner</p>
+
+</body>
+</html>
+
+
+

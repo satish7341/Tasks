@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip - Franco Indian Pharmaceuticals</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #444;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column; /* Changed to column to stack button */
+            align-items: center;
+            padding: 20px;
+        }
+
+        .payslip-container {
+            width: 800px;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .company-details {
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        .company-details h1 {
+            font-size: 16px;
+            font-weight: normal;
+            margin: 0 0 5px 0;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .company-details p {
+            margin: 0;
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Month Strip */
+        .month-strip {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Employee Details Grid */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        .info-table td {
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+            width: 12%;
+        }
+
+        .value {
+            width: 21%;
+            color: #333;
+        }
+
+        /* Attendance Strip */
+        .attendance-strip {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 8px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        .attendance-item span {
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+        /* Financial Table */
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .financial-table th, .financial-table td {
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+        }
+
+        .financial-table th {
+            background-color: #fcfcfc;
+            text-align: right;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .financial-table th:first-child, 
+        .financial-table th:nth-child(4) {
+            text-align: left;
+            background-color: #f2f2f2;
+        }
+
+        .financial-table td {
+            text-align: right;
+        }
+        
+        .financial-table td:first-child, 
+        .financial-table td:nth-child(4) {
+            text-align: left;
+            color: #666;
+        }
+
+        .total-row td {
+            font-weight: bold;
+            background-color: #fff;
+        }
+
+        .net-pay-row td {
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Highlighted Text from Image */
+        .highlight {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #000;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 9px;
+            color: #777;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .net-pay-text {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        #download-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <button id="download-btn" onclick="generatePDF()">Download Payslip as PDF</button>
+
+    <div class="payslip-container" id="payslip">
+        <div class="header">
+            <div class="logo-placeholder">
+                <img class="logo" src="image.png" alt="Company Logo">
+            </div>
+            <div class="company-details">
+                <h1>FRANCO INDIAN PHARMACEUTICALS PRIVATE LIMITED</h1>
+                <p>20, Dr. E. Moses Road, Mahalaxmi, Mumbai - 400011</p>
+            </div>
+            <div style="width: 50px;"></div> </div>
+
+        <div class="month-strip">
+            <span style="margin-right: 20px;">Payslip for the month</span> 
+            <span>Nov - 2025</span>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td class="label">Emp Code</td>
+                <td class="value">DB21477</td>
+                <td class="label">Employee Name</td>
+                <td class="value">Kote Kallurkar Rajesh</td>
+                <td class="label">Designation</td>
+                <td class="value">PROF. SALES OFFICER</td>
+            </tr>
+            <tr>
+                <td class="label">Grade</td>
+                <td class="value">23</td>
+                <td class="label">Branch</td>
+                <td class="value">FIPDB_India</td>
+                <td class="label">Department</td>
+                <td class="value">SOUTH I DIV DBX HYDERABAD REGION</td>
+            </tr>
+            <tr>
+                <td class="label">Category</td>
+                <td class="value">FIPDB</td>
+                <td class="label">Status</td>
+                <td class="value">B_Probationer</td>
+                <td class="label">Joining Dt</td>
+                <td class="value">08-Mar-2025</td>
+            </tr>
+            <tr>
+                <td class="label">ESIC No</td>
+                <td class="value"></td>
+                <td class="label">PF No</td>
+                <td class="value">9902</td>
+                <td class="label">UAN No</td>
+                <td class="value">102095876246</td>
+            </tr>
+            <tr>
+                <td class="label">PAN No</td>
+                <td class="value">PGBPS5626C</td>
+                <td class="label">Bank Name</td>
+                <td class="value">HDFC Bank</td>
+                <td class="label">Account No</td>
+                <td class="value">50100757170128</td>
+            </tr>
+        </table>
+
+        <div class="attendance-strip">
+            <div class="attendance-item">Total Days <span>30.00</span></div>
+            <div class="attendance-item">Days Paid <span>30.00</span></div>
+            <div class="attendance-item">LWP/Absent <span>0.00 / 0.00</span></div>
+        </div>
+
+        <table class="financial-table">
+            <thead>
+                <tr>
+                    <th>Earnings</th>
+                    <th>Gross</th>
+                    <th>Amount</th>
+                    <th>Deductions & Recoveries</th>
+                    <th>Gross</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>New Basic</td>
+                    <td>2300.00</td>
+                    <td>2300.00</td>
+                    <td>Provident Fund</td>
+                    <td>2108.00</td>
+                    <td>2108.00</td>
+                </tr>
+                <tr>
+                    <td>Variable DA</td>
+                    <td>9388.00</td>
+                    <td>9388.00</td>
+                    <td class="highlight">E.S.I.C</td>
+                    <td class="highlight">145</td>
+                    <td class="highlight">145</td>
+                </tr>
+                <tr>
+                    <td>Fixed Dearness All.</td>
+                    <td>15600.00</td>
+                    <td>15600.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>House Rent Allowance</td>
+                    <td>1364.00</td>
+                    <td>1364.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education Allowance</td>
+                    <td>1700.00</td>
+                    <td>1700.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kit Allowance</td>
+                    <td>850.00</td>
+                    <td>850.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>LTA Allowance</td>
+                    <td>800.00</td>
+                    <td>800.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Vehicle Maint Allow</td>
+                    <td>700.00</td>
+                    <td>700.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>FMA_SMA Allow</td>
+                    <td>1300.00</td>
+                    <td>1300.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Conveyance Allowance</td>
+                    <td>1100.00</td>
+                    <td>1100.00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="total-row">
+                    <td>Amount Total :</td>
+                    <td>27774.00</td>
+                    <td>27774.00</td>
+                    <td>Amount Total :</td>
+                    <td>2253.00</td>
+                    <td>2253.00</td>
+                </tr>
+                <tr class="net-pay-row">
+                    <td colspan="3"></td>
+                    <td>Net Pay :</td>
+                    <td colspan="2" style="text-align: right;">25521.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="net-pay-text">Net Pay : 25521.00</div>
+
+        <div class="footer">
+            THIS IS SYSTEM GENERATED PAYSLIP HENCE STAMP AND SIGNATURE NOT REQUIRED
+        </div>
+    </div>
+
+
+</body>
+</html>

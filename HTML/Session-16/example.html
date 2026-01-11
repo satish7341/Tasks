@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>INPUT TAG DEMO</title>
+    <link rel="icon" href="image.png"/>
+</head>
+<body>
+
+    <h2>Demo on the input tag</h2>
+
+    <!-- Simple empty text box -->
+    <input type="text" />
+    <br><br>
+
+    <!-- Text box with size attribute (width control) -->
+    <input type="text" size="50" />
+    <br><br>
+
+    <!-- Text box with minlength and maxlength -->
+    <input type="text" minlength="34" maxlength="35" />
+    <br><br>
+
+    <!-- Placeholder shows hint inside textbox -->
+    <input type="text" placeholder="Enter the first name" />
+    <br><br>
+
+    <!-- Label for last name + text box -->
+    <label for="lname">Enter the last name</label> <br>
+    <input type="text" id="lname" />
+    <br><br>
+
+    <!-- Required input inside a form (must fill before submitting) -->
+    <form>
+        <label>Name:</label><br>
+        <input type="text" required> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+
+    <!-- Value attribute sets a default value -->
+    <input type="text" value="battur">
+    <br><br>
+
+    <!-- readonly means user cannot edit but can copy -->
+    <input type="text" value="battur" readonly>
+    <br><br>
+
+    <!-- disabled means completely inactive (cannot edit or click, not sent in form) -->
+    <input type="text" value="battur" disabled>
+    <br><br>
+
+    <input type="text" id="x1" name="x2">
+
+    <h2>Demo on Password field</h2>
+    <label for="pw">Enter Password</label>
+    <input type="password" id="pw">
+    <br>
+    <label for="cvv">Enter cvv</label>
+    <input type="password" minlength="3" maxlength="3">
+    <br> <br> <br> <br> <br> <br> 
+    
+</body>
+</html>
+
+
+<!--Session-17
+Demo on the Number field-->
+<h2>Demo on the Number field</h2>
+<input type="number">
+<br><br>
+<input type="number" min="0" max="200" step="10">
+
+
+<h2>Demo on the reset buttom </h2>
+<form>
+    <input type="text"><br>
+    <input type="number"> <br>
+    <input type="password"> <br>
+    <input type="reset" value="clear search">
+</form>

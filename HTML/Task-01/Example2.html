@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment</title>
+    <style>
+      #main{
+          width:900px;
+          background: aquamarine;
+          margin:auto;
+          padding:20px;
+      }
+      fieldset{
+          margin-bottom:20px;
+      }
+      table{
+          width:100%;
+          border-collapse: collapse;
+      }
+      table, th, td{
+          border:1px solid black;
+          padding:5px;
+      }
+      button{
+          padding:8px 20px;
+          font-size:16px;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="main">
+       <form>
+
+            <h2 align="center">Job Application Form</h2>
+
+            <!-- Content added below the heading -->
+            <p style="text-align:center; font-size:16px;">
+                Please fill in the details carefully. All required information must be accurate.
+            </p>
+            <hr><br>
+
+            <!-- Personal Details -->
+            <fieldset>
+               <legend>Personal Details</legend>
+
+               <label for="efn">First Name:</label>
+               <input type="text" placeholder="Enter First Name" id="efn" name="efn">
+
+               <label for="mn">Middle Name:</label>
+               <input type="text" placeholder="Enter Middle Name" id="mn" name="mn">
+
+               <label for="ln">Last Name:</label>
+               <input type="text" placeholder="Enter Last Name" id="ln" name="ln">
+              
+              <br><br>
+
+              <label>Gender:</label>
+
+              <input type="radio" id="gen1" name="gen" value="Male">
+              <label for="gen1">Male</label> &nbsp;
+
+              <input type="radio" id="gen2" name="gen" value="Female">
+              <label for="gen2">Female</label>
+
+              <br><br>
+
+              <label for="ph">Phone Number:</label>
+              <input type="text" placeholder="Enter Mobile No." id="ph" name="ph">
+
+              <br><br>
+
+              <label>Address:</label><br>
+              <textarea id="a" rows="5" cols="40" placeholder="Enter Full Address"></textarea>
+            </fieldset>
+
+            <!-- Education Details -->
+            <fieldset>
+                 <legend>Education Details</legend>
+
+                 <table>
+                     <thead>
+                       <tr>
+                         <th>Class</th>
+                         <th>Board / University</th>
+                         <th>Passing Year</th>
+                         <th>Division</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>10th</td> 
+                          <td><input type="text" placeholder="Enter Board/University"></td>
+                          <td><input type="text" placeholder="Enter Passing Year"></td>
+                          <td><input type="text" placeholder="Enter Division"></td>
+                        </tr>
+
+                        <tr>
+                          <td>12th</td>
+                          <td><input type="text" placeholder="Enter Board/University"></td>
+                          <td><input type="text" placeholder="Enter Passing Year"></td>
+                          <td><input type="text" placeholder="Enter Division"></td>
+                        </tr>
+
+                        <tr>
+                          <td>Graduation</td>
+                          <td><input type="text" placeholder="Enter Board/University"></td>
+                          <td><input type="text" placeholder="Enter Passing Year"></td>
+                          <td><input type="text" placeholder="Enter Division"></td>
+                         </tr>
+
+                        <tr>
+                          <td>Other</td>
+                          <td><input type="text" placeholder="Enter Board/University"></td>
+                          <td><input type="text" placeholder="Enter Passing Year"></td>
+                          <td><input type="text" placeholder="Enter Division"></td>
+                         </tr>
+                      </tbody> 
+                 </table>
+            </fieldset>
+
+            <p><b>Experience (in Months):</b> 96 Months Experience in Teaching Field</p>
+
+            <br>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+
+       </form>
+  </div>
+</body> 
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS </title>
+
+    <style>
+        h2{
+            color: brown;
+            background-color: aqua;
+            font-size: 30px;
+            display:inline;
+        }
+
+        input[type="radio"]{
+            width:20px;
+            height: 20px;
+        }
+    </style>
+
+   
+</head>
+
+<body>
+
+<h3>Demo on the block=>inline</h3>
+<h2>Apple</h2>
+<h2>Mango</h2>
+
+<h3>Demo on the inline=>block</h3>
+<span style="background: cyan; display:block;">Orange🍊</span>
+<span style="background: red; display:block;">Pineapple</span>
+
+<br>
+
+<input type="radio" name="rb" onchange="K.style.display='block'">
+<label>Show</label> &nbsp;
+
+<input type="radio" name="rb" onchange="K.style.display='none'">
+<label>Hide</label>
+
+<div id="K">
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+</div>
+
+</body>
+</html>
