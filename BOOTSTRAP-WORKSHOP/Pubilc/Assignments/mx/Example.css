@@ -1,0 +1,29 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width: 1200px;
+    margin:auto;
+}
+.top{
+    background:#d4c9c9;
+    position:fixed;
+    width:100%;
+    z-index:10;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px 0;
+}
+.hero{
+    padding-top: 40px;
+    margin-top: 40px;
+}
+

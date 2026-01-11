@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Query Color Change Demo</title>
+
+  <style>
+    /* ---------- Base Styles (Desktop First) ---------- */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #1e293b; /* Default */
+      color: #ffffff;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .device-info {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* ---------- Mobile (≤ 600px) ---------- */
+    @media (max-width: 600px) {
+      body {
+        background-color: #16a34a; /* Green */
+        color: #ffffff;
+      }
+    }
+
+    /* ---------- Tablet (601px – 900px) ---------- */
+    @media (min-width: 601px) and (max-width: 900px) {
+      body {
+        background-color: #2563eb; /* Blue */
+        color: #ffffff;
+      }
+    }
+
+    /* ---------- Laptop (901px – 1200px) ---------- */
+    @media (min-width: 901px) and (max-width: 1200px) {
+      body {
+        background-color: #9333ea; /* Purple */
+        color: #ffffff;
+      }
+    }
+
+    /* ---------- Large Desktop (≥ 1201px) ---------- */
+    @media (min-width: 1201px) {
+      body {x
+        background-color: #0f172a; /* Dark Navy */
+        color: #e5e7eb;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>CSS Media Query Demo</h1>
+    <p>Resize the screen to see background & text color change.</p>
+
+    <div class="device-info">
+      <p>📱 Mobile → Green</p>
+      <p>📲 Tablet → Blue</p>
+      <p>💻 Laptop → Purple</p>
+      <p>🖥️ Desktop → Dark Navy</p>
+    </div>
+  </div>
+</body>
+</html>
